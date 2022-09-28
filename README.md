@@ -64,8 +64,6 @@ Install [QEMU](https://www.qemu.org/download/#macos)
 
 You can simply run `cargo run` which runs `bootimage runner` under the hood due to the `runner` `.cargo/config.toml` configuration.
 
-or
-
-try running it manually
+or try running it manually
 
 `qemu-system-x86_64 -drive format=raw,file=target/x86_64-hourglass_os/debug/bootimage-hourglass_os.bin`
