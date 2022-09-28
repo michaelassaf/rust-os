@@ -2,9 +2,7 @@
 
 Hourglass OS strives to become the world's leading operating system for programmers to best with minimal setup and distraction free.
 
-## Toolchain
-
-This project uses the rust nightly compiler.
+_This project uses the rust nightly compiler._
 
 ## Custom Target
 
@@ -15,7 +13,9 @@ Configration file: `x86_64-hourglass_os.json`
 Disabled features due to performance impact.
 This could be looked at later in depth to see how we can enable this feature.
 
-`"features": "-mmx,-sse,+soft-float"`
+```json
+"features": "-mmx,-sse,+soft-float"
+```
 
 ## Building for bare metal
 
@@ -24,11 +24,15 @@ This could be looked at later in depth to see how we can enable this feature.
 To build our binary for our custom target, we need to recompile rust `core` and `compiler_builtins` libraries.
 In order to recompile these libraries, cargo needs access to the rust source code. Execute the following.
 
-`rustup component add rust-src`
+```terminal
+rustup component add rust-src
+```
 
 ### Build binary OS kernal
 
-`cargo build`
+```terminal
+cargo build
+```
 
 _We don't need to pass `--target x86_64-hourglass_os.json` becayse we added this to our `config.toml` build configuration_
 
@@ -38,7 +42,9 @@ _We don't need to pass `--target x86_64-hourglass_os.json` becayse we added this
 
 Install `bootimage` that handles compiling the `bootloader` and our `kernal`.
 
-`cargo install bootimage`
+```terminal
+cargo install bootimage
+```
 
 This depends on the following component `llvm-tools-preview`
 
@@ -48,7 +54,9 @@ This depends on the following component `llvm-tools-preview`
 
 The following crate will automatically combine the compiled `bootloader` and `kernal` into a bootable image.
 
-`cargo bootimage`
+```terminal
+cargo bootimage
+```
 
 After executing the command, you should see a bootable disk image named bootimage-hourglass_os.bin in your target/x86_64-hourglass_os/debug directory.
 
@@ -62,7 +70,11 @@ Install [QEMU](https://www.qemu.org/download/#macos)
 
 ### How to run
 
-You can simply run `cargo run` which runs `bootimage runner` under the hood due to the `runner` `.cargo/config.toml` configuration.
+```terminal
+cargo run
+```
+
+This runs `bootimage runner` under the hood due to the `runner` `.cargo/config.toml` configuration.
 
 or try running it manually
 
