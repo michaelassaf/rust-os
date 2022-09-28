@@ -48,7 +48,9 @@ cargo install bootimage
 
 This depends on the following component `llvm-tools-preview`
 
-`rustup component add llvm-tools-preview`
+```terminal
+rustup component add llvm-tools-preview
+```
 
 ### Create bootable image
 
@@ -78,4 +80,6 @@ This runs `bootimage runner` under the hood due to the `runner` `.cargo/config.t
 
 or try running it manually
 
-`qemu-system-x86_64 -drive format=raw,file=target/x86_64-hourglass_os/debug/bootimage-hourglass_os.bin`
+```terminal
+qemu-system-x86_64 -drive format=raw,file=target/x86_64-hourglass_os/debug/bootimage-hourglass_os.bin
+```
