@@ -76,7 +76,7 @@ Install [QEMU](https://www.qemu.org/download/#macos)
 cargo run
 ```
 
-This runs `bootimage runner` under the hood due to the `runner` `.cargo/config.toml` configuration.
+This compiles the `bootloader` and `kernal` (saving you time to execute `cargo build` first) and then finally runs `bootimage runner` under the hood due to the `runner` `.cargo/config.toml` configuration.
 
 or try running it manually
 
