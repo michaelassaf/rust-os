@@ -1,0 +1,11 @@
+[build]
+target = "x86_64-hourglass_os.json"
+
+[target.'cfg(target_os = "none")']
+runner = "bootimage runner"
+
+# needed compile code for other targets
+# https://doc.rust-lang.org/nightly/cargo/reference/unstable.html#build-std
+[unstable]
+build-std-features = ["compiler-builtins-mem"]
+build-std = ["core", "compiler_builtins"]

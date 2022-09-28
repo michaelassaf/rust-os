@@ -1,0 +1,13 @@
+[package]
+name = "hourglass_os"
+version = "0.1.0"
+edition = "2021"
+authors = ["Michael Assaf <michael.antoine.assaf@gmail.com>"]
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+# upgrading bootloader to 0.10.7 resulted in the following error
+# ! The `bootloader` dependency has not the right format: No `package.metadata.bootloader.target` key found in Cargo.toml of bootloader
+# TODO: Figure out the advantages of upgrading bootloader and how to upgrade it
+bootloader = "0.9.8"
