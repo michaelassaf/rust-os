@@ -1,4 +1,4 @@
-# hourglassOS
+# rust-os
 
 Hourglass OS strives to become the world's leading operating system for programmers to best with minimal setup and distraction free.
 
