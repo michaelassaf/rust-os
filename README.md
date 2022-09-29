@@ -1,6 +1,8 @@
 # rust-os
 
-Hourglass OS strives to become the world's leading operating system for programmers to best with minimal setup and distraction free.
+OS written in Rust, taught in the [phil-opp blog](https://os.phil-opp.com/).
+
+This includes only the minimal Rust kernal outputing `Hello World!`.
 
 _This project uses the rust nightly compiler._
 
